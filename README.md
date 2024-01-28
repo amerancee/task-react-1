@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+Главное задание:
+1. Починить приложение: форма не добавляет todo при нажатии "+"
+2. Написать логику валидации формы при добавлении todo
+3. Реализовать возможность удаления одного todo
+4. Оптимизировать (если есть такая необходимость) компоненты и хук useTodos
+5. Добавить обработку невалидных данных формы (менять border-color формы и выводить красную подпись под полем ввода)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Дополнительно:
+1. Реализовать возможность удалить все todo одним кликом
+2. Реализовать кеширование данных на клиенте:
+    2.1 Сохранять todos в localStorage
+    2.2 Загружать todos из localStorage при первом монтировании
+    2.3 Если в (2.2) удалось загрузить хотя бы одну todo, то не производить запроса todo через api в хуке useTodos. Если не удалось загрузить ничего или загружен пустой массив, то нужно сделать запрос todos через api.

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+    width: 100%;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 24px 1fr auto;
+    gap: 12px;
+    justify-items: start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    margin: 0;
+}
